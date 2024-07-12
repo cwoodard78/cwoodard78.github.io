@@ -4,60 +4,216 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Chad's Homepage</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
-            color: #333;
-            text-align: center;
-            padding: 50px;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 0;
-        }
-        h1 {
-            font-size: 2.5em;
-        }
-        p {
-            font-size: 1.2em;
-        }
-        .content {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            margin-top: 20px;
-            padding: 10px 0;
-            background-color: #333;
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="home">
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="javascript:void(0)" id="contactLink">Contact</a>
+    </nav>
     <header>
-        <h1>Welcome to Chad's Homepage</h1>
+        <h1><br><br><br> </h1>
     </header>
+    <div  id="about"><br></div>
     <div class="content">
         <h2>About Me</h2>
-        <p>Hi! I'm Chad Woodard, a software developer hobbyist and data geek. I love working on various projects, exploring new technologies, and sharing my knowledge with the community.</p>
+        <p>My name is Chad. I'm a program manager and engineer in the aerospace and defense industry, but I enjoy doing freelance work on interesting projects. While I have no plans to leave my day job, freelance and hobbies keep my skills fresh and allow me to help others. I'm currently pursuing degrees in computer science, data engineering, and industrial and systems engineering to develop my own business analytics tools.</p>
+        <p>If you have a unique problem, I'd love to brainstorm solutions with you!</p>
+    </div>
+    <div  id="projects"><br></div>
+    <div class="content">
         <h2>My Projects</h2>
         <p>Here are a few projects I've been working on:</p>
         <ul>
-            <li>Rating Rivals: A web app for comparing PDGA player rankings in bulk.</li>
+            <li>Rating Rivals: A web app to compare PDGA ratings among disc golfers.</li>
             <li>DiscData: A web app for comparing disc golf data.</li>
             <li>IoT for Physical Health: A wearable fitness companion project.</li>
             <li>Various projects involving Raspberry Pi, GLCD, and ARM MCBSTM32C boards.</li>
         </ul>
+    </div>
+    <div  id="skills"><br></div>
+    <div class="content">
+        <h2>Skills</h2>
+        <h3>Programming</h3>
+        <p>Proficiency in Python, JavaScript, R, Assembly, VBA, C++, MATLAB, and PHP. Experience implementing Django and Node frameworks to create responsive apps.</p>
+        <h3>Analytics</h3>
+        <p>Experienced in using Tableau, Power BI, MS Access & Excel to create comprehensive data analysis tools and dashboards. Interested in machine learning and AI applications in the workplace and everyday life.</p>
+        <h3>Writing</h3>
+        <p>Check out my articles on various topics such as math, philosophy, psychology, history, futurism, the workplace, and more on <a href="https://medium.com/@chadwoodard78" target="_blank">medium.com</a>.</p>
+        <h3>Music</h3>
+        <p>I enjoy playing guitar and cello to relax in my spare time.</p>
+        <h3>Chess</h3>
+        <p>Challenge me on <a href="https://www.chess.com/stats/overview/chad_woodard" target="_blank">chess.com</a>.</p>
+    </div>
+    <div  id="education"><br></div>
+    <div class="content">
+        <h2>Education</h2>
+        <table>
+            <tr>
+                <th>Degree/Certification</th>
+                <th>Institution</th>
+            </tr>
+            <tr>
+                <td>BS in Mechanical Engineering</td>
+                <td>University of Alabama</td>
+            </tr>
+            <tr>
+                <td>Master of Public Administration</td>
+                <td>Georgia College & State University</td>
+            </tr>
+            <tr>
+                <td>Master of Business Administration (MBA)</td>
+                <td>University of Massachusetts, Amherst</td>
+            </tr>
+            <tr>
+                <td>Certificate in Human Systems Integration</td>
+                <td>Naval Postgraduate School</td>
+            </tr>
+            <tr>
+                <td>Certificate in Fashion Design</td>
+                <td>Otis College of Art and Design</td>
+            </tr>
+            <tr>
+                <td>BS in Computer Science (Expected 2025)</td>
+                <td>University of London, Goldsmiths</td>
+            </tr>
+            <tr>
+                <td>MS in Data Engineering (Expected 2025)</td>
+                <td>Southern Methodist University</td>
+            </tr>
+            <tr>
+                <td>PhD in Industrial and Systems Engineering (Expected 2027)</td>
+                <td>Mississippi State University</td>
+            </tr>
+        </table>
+    </div>
+    <div  id="contact"><br></div>
+    <div class="content">
         <h2>Support Me</h2>
         <p>If you like my work and want to support me, you can <a href="https://buymeacoffee.com/chadwoodard">buy me a coffee</a>.</p>
+        <!-- <div class="social-media">
+            <a href="https://twitter.com"><img src="https://via.placeholder.com/40x40" alt="Twitter"></a>
+            <a href="https://linkedin.com"><img src="https://via.placeholder.com/40x40" alt="LinkedIn"></a>
+            <a href="https://github.com"><img src="https://via.placeholder.com/40x40" alt="GitHub"></a>
+        </div> -->
+        <!-- <button id="contactBtn">Send a Message</button> -->
     </div>
     <footer>
         <p>&copy; 2024 Chad Woodard. All rights reserved.</p>
     </footer>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" required></textarea><br><br>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="chadwoodard" data-description="Support me on Buy me a coffee!" data-message="" data-color="#FF5F5F" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("contactModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("contactBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Handle form submission
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            // Here you can handle the form submission, e.g., send the data to a server
+            // For demonstration, we'll just display an alert
+            alert("Thank you for your message, " + name + "!");
+
+            // Close the modal
+            modal.style.display = "none";
+
+            // Reset the form
+            document.getElementById("contactForm").reset();
+        });
+    </script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("contactModal");
+
+        // Get the link that opens the modal
+        var link = document.getElementById("contactLink");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the link, open the modal 
+        link.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Handle form submission
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            // Here you can handle the form submission, e.g., send the data to a server
+            // For demonstration, we'll just display an alert
+            alert("Thank you for your message, " + name + "!");
+
+            // Close the modal
+            modal.style.display = "none";
+
+            // Reset the form
+            document.getElementById("contactForm").reset();
+        });
+    </script>
+
 </body>
 </html>
